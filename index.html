@@ -6,6 +6,207 @@
     <title>Document</title>
 </head>
 <body>
-    This is B-Tech Academy
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <img src="./images/B-Tech_Logo-removebg-preview.png" alt="Logo">
+            </a>
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                <input placeholder="Search" type="search" class="input">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="sign-in-btn">Sign In</button>
+        </div>
+
+    </nav>
+
+    <section style="background-color: rgb(255, 255, 255); display: flex; margin:10px; justify-content: space-between; align-items: center;">
+        <div style="background-color:rgb(255, 255, 255); margin: 85px">
+            <div style="color: green; font-size:70px ;'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                <strong><em>Education</em></strong> for <strong>All |</strong><br>
+                <strong><em>Change</em></strong> for the <br>
+                <strong><em>Future</em></strong></div>
+            </div>
+            <div>
+                <img src="./images/B-Tech_Logo-removebg-preview.png" alt="Logo Image" width="500px" height="500px">
+            </div>
+        </div>
+    </section>
+
+            
+        
 </body>
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 1px solid green;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 140px;/* Adjust as needed */
+    height: 100px
+    
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    /* padding: 10px; */
+    border-radius: 3px;
+    color: black
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.group {
+ display: flex;
+ /* line-height: 28px; */
+ align-items: center;
+ position: relative;
+ /* max-width: 190px; */
+}
+
+.input {
+ width: 400px;
+ height: 40px;
+ /* line-height: 28px; */
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: green;
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+
+
+.sign-in-btn {
+    position: relative;
+    padding: 10px 20px;
+    font-size:12px;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.sign-in-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Slide-in color */
+    z-index: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sign-in-btn:hover::before {
+    transform: translateX(0);
+}
+
+.sign-in-btn:hover {
+    color: #ffffff;
+    border-color: #000000;
+}
+.sign-in-btn:hover span {
+    color: #fff;
+}
+
+.sign-in-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .search-container {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+</style>
 </html>
